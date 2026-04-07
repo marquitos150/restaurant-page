@@ -1,0 +1,1 @@
+export const greeting = "Hi, I'm Gordon Ramsay. Nice to meet you donut!";
