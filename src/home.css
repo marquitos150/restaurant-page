@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url('fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --primary-background-color: rgb(206, 33, 53);
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 228, 231);
+  --font-heading: 'Pacifico', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -6,13 +35,10 @@
   padding: 0;
 }
 
-:root {
-  --primary-background-color: rgb(173, 2, 22);
-}
-
 body {
   position: relative;
   z-index: 0;
+  font-family: var(--font-body);
 }
 
 body::before {
@@ -34,11 +60,20 @@ header {
   padding: 10px 50px 10px 20px;
 }
 
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  color: var(--primary-color);
+}
+
 .logo {
   background-image: url('assets/logo.svg');
   background-size: cover;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 nav {
@@ -50,7 +85,12 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.heading {
+  background-color: var(--primary-background-color);
 }
 
 .gordon-images {
@@ -62,18 +102,18 @@ nav {
   background-image: url('assets/gordon-left.png');
   background-size: cover;
   background-position: center;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   position: absolute;
-  right: 70%;
+  right: 75%;
 }
 
 .giant-logo {
   background-image: url('assets/logo.svg');
   background-size: cover;
   background-position: center;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 
 .gordon-right {
@@ -83,5 +123,10 @@ nav {
   width: 200px;
   height: 300px;
   position: absolute;
-  left: 70%;
+  left: 75%;
+}
+
+.introduction {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
 }
