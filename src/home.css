@@ -20,14 +20,14 @@
 }
 
 :root {
-  --primary-background-color: rgb(206, 33, 53);
-  --secondary-background-color: rgb(250, 84, 104);
-  --primary-color: rgb(0, 0, 0);
-  --secondary-color: rgb(255, 228, 231);
-  --font-heading: 'Pacifico', sans-serif;
-  --font-body: 'Poppins', sans-serif;
-  --small-font-size: 20px;
-  --large-font-size: 48px;
+  --primary-color: rgb(206, 33, 53);
+  --secondary-color: rgb(250, 84, 104);
+  --dark-color: rgb(0, 0, 0);
+  --light-color: rgb(255, 228, 231);
+  --font-family-heading: 'Pacifico', sans-serif;
+  --font-family-body: 'Poppins', sans-serif;
+  --small-font-size: 1.25rem;
+  --large-font-size: 3rem;
 }
 
 *,
@@ -41,14 +41,13 @@
 body {
   position: relative;
   z-index: 0;
-  font-family: var(--font-body);
+  font-family: var(--font-family-body);
 }
 
 body::before {
   content: "";
   position: fixed;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-image: url('assets/background.jpg');
   background-repeat: repeat;
   opacity: 0.5;
@@ -57,38 +56,41 @@ body::before {
 
 header {
   position: sticky;
-  top: 0;
-  background-color: var(--primary-background-color);
+  inset: 0;
+  background-color: var(--primary-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 100px 10px 20px;
+  padding: 0.625rem 1.25rem;
   z-index: 1;
 }
 
 .header-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
+  gap: 0.625rem;
+  font-family: var(--font-family-heading);
   font-size: var(--large-font-size);
-  color: var(--primary-color);
+  color: var(--dark-color);
+  padding-right: 0.625rem;
 }
 
 .logo {
   background-image: url('assets/logo.svg');
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   width: 100px;
   height: 100px;
 }
 
 nav {
+  margin-left: auto;
   display: flex;
-  gap: 85px;
+  gap: clamp(3rem, 6vw, 8.25rem);
+  padding-right: clamp(1.25rem, 3vw, 5rem);
 }
 
 button {
-  background-color: var(--primary-background-color);
+  background-color: var(--primary-color);
   border: none;
   font-size: var(--small-font-size);
   font-weight: bold;
@@ -99,7 +101,11 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-background-color);
+  background-color: var(--secondary-color);
+}
+
+.menu-toggle {
+  display: none;
 }
 
 #content {
@@ -117,14 +123,14 @@ button:hover {
 .heading-border {
   position: absolute;
   inset: 0;
-  background-color: var(--primary-color);
+  background-color: var(--dark-color);
   clip-path: polygon(73% 0%, 98% 50%, 73% 100%, 27% 100%, 2% 50%, 27% 0%);
   transform: scale(1.15);
   z-index: 0;
 }
 
 .heading-content {
-  background-color: var(--primary-background-color);
+  background-color: var(--primary-color);
   font-size: var(--small-font-size);
   padding: 5px 50px;
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);
@@ -180,8 +186,8 @@ button:hover {
 }
 
 .menu-container {
-  background-color: var(--primary-background-color);
-  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--light-color);
   display: flex;
 }
 
@@ -194,13 +200,80 @@ button:hover {
 }
 
 .hours {
-  background-color: var(--secondary-color);
+  background-color: var(--light-color);
   display: flex;
 }
+
 .restaurant {
   background-image: url('assets/restaurant.png');
   background-size: cover;
   background-position: center;
   width: 1000px;
   height: 1000px;
+}
+
+.reviews {
+  display: flex;
+  gap: 50px;
+}
+
+.review {
+  background-color: rgba(255, 228, 231, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic {
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+}
+
+.pic1 {
+  background-image: url('assets/girl1.png');
+}
+
+.pic2 {
+  background-image: url('assets/boy.png');
+}
+
+.pic3 {
+  background-image: url('assets/girl2.png');
+}
+
+.gordon-fullbody {
+  background-image: url('assets/gordon-fullbody.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 850px;
+}
+
+footer {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 30px 0;
+  font-size: var(--small-font-size);
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    background-image: url('assets/three-horizontal-lines-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0;
+  }
 }
