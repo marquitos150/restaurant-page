@@ -69,7 +69,7 @@ header {
   align-items: center;
   gap: 0.625rem;
   font-family: var(--font-family-heading);
-  font-size: var(--large-font-size);
+  font-size: clamp(var(--small-font-size), 8vw + 1rem, var(--large-font-size));
   color: var(--dark-color);
   padding-right: 0.625rem;
 }
@@ -79,23 +79,26 @@ header {
   background-size: contain;
   background-position: center;
   width: 100px;
-  height: 100px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
 }
 
 nav {
   margin-left: auto;
   display: flex;
   gap: clamp(3rem, 6vw, 8.25rem);
-  padding-right: clamp(1.25rem, 3vw, 5rem);
+  padding-right: 1rem;
 }
 
-button {
+nav > button,
+.menu-toggle {
   background-color: var(--primary-color);
   border: none;
   font-size: var(--small-font-size);
   font-weight: bold;
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 0.625rem 1.25rem;
   border-radius: 15px;
   transition: background-color 0.15s ease-in;
 }
