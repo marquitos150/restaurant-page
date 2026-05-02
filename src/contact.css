@@ -1,0 +1,7 @@
+.cursed-gordon-ramsay {
+    background-image: url('assets/cursed-gordon-ramsay.png');
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    aspect-ratio: 3 / 2;
+}
