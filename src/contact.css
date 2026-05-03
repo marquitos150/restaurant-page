@@ -1,7 +1,94 @@
+.contact-wrapper {
+    min-height: calc(100dvh - 300px);
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(25px);
+    padding: var(--padding);
+}
+
+.contact-form > h1 {
+    font-size: clamp(1.1rem, 3.5vw, var(--header-font-size));
+}
+
+.contact-form > p {
+    font-size: clamp(0.75rem, 1.1vw, 1rem);
+    margin-bottom: var(--padding);
+    width: min(100%, 600px);
+}
+
+.contact-form > p > em > span {
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form > label {
+    font-size: clamp(var(--small-font-size), 1.5vw, var(--font-size));
+}
+
+
+form > input {
+    padding: 0.3rem;
+    font-size: clamp(var(--small-font-size), 1.5vw, var(--font-size));
+    width: min(100%, 600px);
+    border: 2px solid rgb(150, 150, 150);
+    border-radius: 5px;
+    margin-bottom: var(--padding);
+}
+
+form > input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+
+form > textarea {
+    resize: none;
+    border: 2px solid rgb(150, 150, 150);
+    border-radius: 5px;
+    width: min(100%, 600px);
+    font-family: var(--font-family-body);
+    font-size: clamp(var(--small-font-size), 1.5vw, var(--font-size));
+    padding: 0.3rem;
+}
+
+form > button {
+    align-self: flex-start;
+    background-color: var(--primary-color);
+    padding: var(--padding) 2rem;
+    border: none;
+    border-radius: 15px;
+    font-size: var(--font-size);
+    font-weight: bold;
+    transition: background-color 0.15s ease-in;
+    cursor: pointer;
+}
+
+form > button:hover {
+    background-color: var(--secondary-color);
+}
+
 .cursed-gordon-ramsay {
     background-image: url('assets/cursed-gordon-ramsay.png');
     background-size: cover;
-    background-position: center;
-    width: 400px;
+    background-position: right center;
+    width: max(1240px, 100%);
     aspect-ratio: 3 / 2;
+}
+
+@media (max-width: 768px) {
+    .cursed-gordon-ramsay {
+        width: calc(60% - 100px);
+        background-position: 85%;
+    }
 }
