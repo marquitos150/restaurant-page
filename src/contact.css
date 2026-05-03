@@ -47,11 +47,6 @@ form > input {
     margin-bottom: var(--padding);
 }
 
-form > input:focus {
-    outline: none;
-    border: 2px solid var(--primary-color);
-}
-
 form > textarea {
     resize: none;
     border: 2px solid rgb(150, 150, 150);
@@ -60,6 +55,12 @@ form > textarea {
     font-family: var(--font-family-body);
     font-size: clamp(var(--small-font-size), 1.5vw, var(--font-size));
     padding: 0.3rem;
+}
+
+form > input:focus,
+form > textarea:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
 }
 
 form > button {
@@ -79,9 +80,9 @@ form > button:hover {
 }
 
 .cursed-gordon-ramsay {
-    background-image: url('assets/cursed-gordon-ramsay.png');
-    background-size: cover;
-    background-position: right center;
+    /*background-image: url('assets/cursed-gordon-ramsay.png');*/
+    object-fit: cover;
+    object-position: right center;
     width: max(1240px, 100%);
     aspect-ratio: 3 / 2;
 }
@@ -89,6 +90,6 @@ form > button:hover {
 @media (max-width: 768px) {
     .cursed-gordon-ramsay {
         width: calc(60% - 100px);
-        background-position: 85%;
+        object-position: 85%;
     }
 }
