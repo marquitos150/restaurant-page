@@ -104,7 +104,7 @@ export function Home() {
         boldText.textContent = "Take a look at them in our online menu!";
 
         const button = document.createElement("button");
-        button.id = "menu";
+        button.classList.add("menuBtn");
         button.textContent = "Explore Menu";
 
         menuWrapper.appendChild(chickenBackground);
@@ -242,7 +242,7 @@ export function Home() {
         text.append("If you have any questions or comments, feel free to contact me ");
 
         const button = document.createElement("button");
-        button.id = "contact";
+        button.classList.add("contactBtn");
         button.textContent = "here";
         text.appendChild(button);
         text.append("!");
