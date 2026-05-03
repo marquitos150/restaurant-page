@@ -7,29 +7,12 @@ import { Contact } from "./contact.js";
 
 const content = document.querySelector("#content");
 
-function addButtonListener() {
-    const buttons = [...document.querySelectorAll("button")];
-    buttons.forEach((button) => {
-        button.addEventListener('click', (e) => {
-            e.target.blur();
-            if (e.target.classList.value === "homeBtn") {
-                displayHomePage();
-            }
-            if (e.target.classList.value === "menuBtn") {
-                displayMenuPage();
-            }
-            if (e.target.classList.value === "contactBtn") {
-                displayContactPage();
-            }
-        });
-    });
-}
-
 function onSubmitForm() {
     const form = document.querySelector("form");
+    if (!form) return;
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        e.target.blur();
         window.open("https://www.youtube.com/watch?v=vR7KLmVThLk", "_blank");
     });
 }
@@ -51,7 +34,6 @@ function displayHomePage() {
     content.appendChild(Home().displayReviewsPanel());
     content.appendChild(Home().displayOutroPanel());
     scrollToTop();
-    addButtonListener();
 }
 
 function displayMenuPage() {
@@ -59,7 +41,6 @@ function displayMenuPage() {
     content.appendChild(Menu().displayHeading());
     content.appendChild(Menu().displayMenu());
     scrollToTop();
-    addButtonListener();
 }
 
 function displayContactPage() {
@@ -68,11 +49,26 @@ function displayContactPage() {
     content.appendChild(Contact().displayContactForm());
     onSubmitForm();
     scrollToTop();
-    addButtonListener();
 }
 
-// Initlally display the home page
+// Initlally display the home page (after refreshing page)
 displayHomePage();
 window.onbeforeunload = () => {
   window.scrollTo(0, 0);
 };
+
+// Listen for any button clicks
+document.addEventListener('click', (e) => {
+    if (!e.target.matches("button")) return;
+    e.target.blur();
+
+    if (e.target.classList.value === "homeBtn") {
+        displayHomePage();
+    }
+    if (e.target.classList.value === "menuBtn") {
+        displayMenuPage();
+    }
+    if (e.target.classList.value === "contactBtn") {
+        displayContactPage();
+    }
+});
