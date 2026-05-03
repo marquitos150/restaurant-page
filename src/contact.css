@@ -80,10 +80,9 @@ form > button:hover {
 }
 
 .cursed-gordon-ramsay {
-    /*background-image: url('assets/cursed-gordon-ramsay.png');*/
     object-fit: cover;
     object-position: right center;
-    width: max(1240px, 100%);
+    width: max(300px, 60%);
     aspect-ratio: 3 / 2;
 }
 
