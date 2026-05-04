@@ -59,16 +59,21 @@ window.onbeforeunload = () => {
 
 // Listen for any button clicks
 document.addEventListener('click', (e) => {
-    if (!e.target.matches("button")) return;
-    e.target.blur();
+    const button = e.target.closest("button");
+    const dropDownMenu = document.querySelector(".drop-down-menu-toggle");
 
-    if (e.target.classList.value === "homeBtn") {
+    if (button && button.classList.value === "toggleBtn") {
+        dropDownMenu.classList.toggle("open");
+    } else if (button && button.classList.value === "homeBtn") {
         displayHomePage();
-    }
-    if (e.target.classList.value === "menuBtn") {
+        dropDownMenu.classList.remove("open");
+    } else if (button && button.classList.value === "menuBtn") {
         displayMenuPage();
-    }
-    if (e.target.classList.value === "contactBtn") {
+        dropDownMenu.classList.remove("open");
+    } else if (button && button.classList.value === "contactBtn") {
         displayContactPage();
+        dropDownMenu.classList.remove("open");
+    } else if (!e.target.closest(".drop-down-menu-toggle")) {
+        dropDownMenu.classList.remove("open");
     }
 });

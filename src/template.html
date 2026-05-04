@@ -7,16 +7,27 @@
 </head>
 <body>
     <header>
-        <div class="header-brand">
-            <div class="logo"></div>
-            GRN
-        </div>
+        <button class="homeBtn">
+            <div class="header-brand">
+                <div class="logo"></div>
+                GRN
+            </div>
+        </button>
         <nav>
             <button class="homeBtn">Home</button>
             <button class="menuBtn">Menu</button>
             <button class="contactBtn">Contact</button>
         </nav>
-        <button class="menu-toggle"></button>
+        <div class="drop-down-menu-toggle">
+            <button class="toggleBtn">
+                <div class="three-horizontal-lines"></div>
+            </button>
+            <ul>
+                <li><button class="homeBtn">Home</button></li>
+                <li><button class="menuBtn">Menu</button></li>
+                <li><button class="contactBtn">Contact</button></li>
+            </ul>
+        </div>
     </header>
     <div id="content"></div>
     <footer>
