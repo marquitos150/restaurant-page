@@ -66,6 +66,7 @@ form > textarea:focus {
 form > button {
     align-self: flex-start;
     background-color: var(--primary-color);
+    color: var(--dark-color);
     padding: var(--padding) 2rem;
     border: none;
     border-radius: var(--border-radius);

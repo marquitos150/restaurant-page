@@ -105,6 +105,7 @@ nav {
 
 nav > button {
   background-color: var(--primary-color);
+  color: var(--dark-color);
   border: none;
   font-size: var(--font-size);
   font-weight: bold;
@@ -253,6 +254,7 @@ nav > button:hover {
 .menu-main > button {
   align-self: flex-start;
   background-color: var(--light-color);
+  color: var(--dark-color);
   border: none;
   font-size: clamp(var(--small-font-size), 2vw, var(--font-size));
   font-weight: bold;
@@ -481,6 +483,7 @@ footer {
 
   .drop-down-menu-toggle > ul > li > button {
     background-color: var(--primary-color);
+    color: var(--dark-color);
     padding: var(--padding) calc(var(--padding) * 1.9);
     width: 100%;
     border: none;

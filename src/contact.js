@@ -55,6 +55,8 @@ export function Contact() {
         contactFormDesc.appendChild(contactFormDescItac);
 
         const form = document.createElement("form");
+        form.setAttribute("autocomplete", "off");
+        
         const formData = [
             {
                 labelText: "First Name:",
@@ -83,7 +85,8 @@ export function Contact() {
                 type: "tel",
                 placeHolder: "123-456-7890",
                 required: false,
-                pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}",
+                maxLength: "12"
             },
             {
                 labelText: "Your Message:",
@@ -114,11 +117,27 @@ export function Contact() {
                 input.setAttribute("id", data.attributeName);
                 input.setAttribute("name", data.attributeName);
                 input.setAttribute("placeholder", data.placeHolder);
+
                 if (data.required) {
                     input.setAttribute("required", "");
                 }
                 if (Object.hasOwn(data, "pattern")) {
                     input.setAttribute("pattern", data.pattern);
+                    input.setAttribute("maxlength", data.maxLength);
+
+                    // event listener for automatically adding and removing dashes in phone number field
+                    input.addEventListener("input", (e) => {
+                        let value = e.target.value.replace(/\D/g, "");
+                        if (value.length > 10) value = value.slice(0, 10);
+
+                        if (value.length > 6) {
+                            e.target.value = `${value.slice(0, 3)}-${value.slice(3, 6)}-${value.slice(6)}`;
+                        } else if (value.length > 3) {
+                            e.target.value = `${value.slice(0, 3)}-${value.slice(3)}`;
+                        } else {
+                            e.target.value = value;
+                        }
+                    });
                 }
                 form.appendChild(input);
             }
