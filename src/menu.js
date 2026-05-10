@@ -109,7 +109,7 @@ export function Menu() {
                         name: "Ghandi's Flip Flop",
                         image: ghandisFlipFlop,
                         price: "$8.25",
-                        description: "Basically just overcooked chicken in the shape of a flip flop. It's cooked to fuck."
+                        description: "Basically just overcooked chicken in the shape of a flip flop. Also known as \'Overcooked Garbage\'."
                     }
                 ]
             },
@@ -197,7 +197,7 @@ export function Menu() {
                         name: "Bacon Bomb Sandwich",
                         image: baconBombSandwich,
                         price: "$14.75",
-                        description: "Chicken sandwich with added ingredients like bacon, cheese, and onion rings. This shit is the bomb."
+                        description: "Chicken sandwich with added ingredients like bacon, cheese, and onion rings. It's the bomb."
                     }
                 ]
             },
@@ -232,7 +232,7 @@ export function Menu() {
                         name: "Mac & Cheese",
                         image: macCheese,
                         price: "$2.35",
-                        description: "Classic mac & cheese. No, they are not store-bought crap, frozen mac & cheese."
+                        description: "Classic mac & cheese. No, they are not store-bought, frozen mac & cheese."
                     },
                     {
                         name: "Mashed Potatoes",
@@ -255,7 +255,7 @@ export function Menu() {
                         name: "GRN Donut",
                         image: grnDonut,
                         price: "$3.50",
-                        description: "Just a chocolate donut. You are a chocolate don... oh wait."
+                        description: "Just a chocolate donut. I like chocolate!"
                     },
                     {
                         name: "Caramel Ice Cream",
@@ -284,7 +284,7 @@ export function Menu() {
                         name: "Coke",
                         image: coke,
                         price: "$2.45",
-                        description: "Just regular Coca-Cola. Don't get me started on Pepsi, that shitty debate is lame."
+                        description: "Just regular Coca-Cola. Don't get me started on Pepsi, that debate is lame."
                     },
                     {
                         name: "Lemonade",
@@ -302,7 +302,7 @@ export function Menu() {
                         name: "Sprite",
                         image: sprite,
                         price: "$2.45",
-                        description: "Sprite. Who the fuck drinks sprite these days?"
+                        description: "Sprite. Who drinks Sprite these days?"
                     },
                     {
                         name: "Coke Zero",

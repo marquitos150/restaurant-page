@@ -1,3 +1,5 @@
+"use strict";
+
 import "./home.css";
 import "./menu.css";
 import "./contact.css";
