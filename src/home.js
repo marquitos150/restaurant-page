@@ -1,11 +1,9 @@
 // Import images
 import logo from "./assets/logo.svg";
-import gordonLeft from "./assets/gordon-left.png";
-import gordonRight from "./assets/gordon-right.png";
 import profilePic1 from "./assets/girl1.png";
 import profilePic2 from "./assets/boy.png";
 import profilePic3 from "./assets/girl2.png";
-import gordonFull from "./assets/gordon-fullbody.png";
+import grillyFull from "./assets/grilly-fullbody.png";
 
 // Display the home page
 export function Home() {
@@ -37,20 +35,14 @@ export function Home() {
         return headingWrapper;
     };
 
-    // TOP GORDON IMAGES
-    const displayGordonImages = () => {
-        const gordonImagesWrapper = document.createElement("div");
-        gordonImagesWrapper.classList.add("gordon-images");
+    // GRILLY LOGO
+    const displayGrillyLogo = () => {
+        const grillyImagesWrapper = document.createElement("div");
+        grillyImagesWrapper.classList.add("grilly-images");
+        const grillyGiantLogo = createImage(logo, "GRN logo", "giant-logo");
+        grillyImagesWrapper.appendChild(grillyGiantLogo);
 
-        const gordonLeftImage = createImage(gordonLeft, "Gordon's face left", "gordon-left");
-        const gordonGiantLogo = createImage(logo, "GRN logo", "giant-logo");
-        const gordonRightImage = createImage(gordonRight, "Gordon's face right", "gordon-right");
-        
-        gordonImagesWrapper.appendChild(gordonLeftImage);
-        gordonImagesWrapper.appendChild(gordonGiantLogo);
-        gordonImagesWrapper.appendChild(gordonRightImage);
-
-        return gordonImagesWrapper;
+        return grillyImagesWrapper;
     };
 
     // INTRODUCTION PANEL
@@ -60,16 +52,16 @@ export function Home() {
 
         const firstParagraph = document.createElement("p");
         firstParagraph.textContent = `
-            Welcome to GRN—Gordon Ramsay's Nuggets—where we 
+            Welcome to GRN—Grilly Rawford's Nuggets—where we 
             serve some of the finest chicken in the country. Think KFC is better? Well it's not. 
             And if you don't believe me? Well then you're a donut.
         `
 
         const secondParagraph = document.createElement("p");
         secondParagraph.textContent = `
-            On top of this, we have a variety of food options you can choose from that are 
-            featured in my shows and other restaurants. While you're here, you might even meet world-renowned chefs 
-            or former contestants that now work at our kitchen. If you're lucky, you may even catch me stopping by too!
+            On top of this, we have a variety of food options you can choose from that were inspired from popular
+            shows and other restaurants. While you're here, you might even meet world-renowned chefs 
+            that now work at our kitchen. If you're lucky, you may even catch me stopping by too!
         `
 
         introWrapper.appendChild(firstParagraph);
@@ -187,14 +179,14 @@ export function Home() {
         const images = [image1, image2, image3];
         const names = ["Andressa", "James", "Maria"];
         const content = [
-            `\"The Wellington burgers were SOOOO good! Thankfully they weren't raw.\"`,
+            `\"The grilled sandwich was SOOOO good! Thankfully it wasn't raw.\"`,
 
             `\"The staff were friendly and the food was served quickly. 
             I've never seen a fast-food restaurant with service this fast!\"`,
 
-            `\"I brought my son here just for a quick lunch, and luckily Gordon Ramsay was there.
-            My son was so happy to see him! 
-            Gordon and the staff were very caring and ensured we had a great time there.\"`
+            `\"I brought my son here just for a quick lunch, and luckily Grilly Rawford was there.
+            My son was so happy to see him!
+            Grilly and the staff were very caring and ensured we had a great time there.\"`
         ];
         
         // create the 3 card panels for the reviews
@@ -250,15 +242,15 @@ export function Home() {
         speechBubble.appendChild(text);
         outroWrapper.appendChild(speechBubble);
 
-        const gordonRamsay = createImage(gordonFull, "Gordon Ramsay", "gordon-fullbody");
-        outroWrapper.appendChild(gordonRamsay);
+        const grillyRawford = createImage(grillyFull, "Grilly Rawford", "grilly-fullbody");
+        outroWrapper.appendChild(grillyRawford);
 
         return outroWrapper;
     };
 
     return { 
         displayHeading, 
-        displayGordonImages, 
+        displayGrillyLogo, 
         displayIntroPanel, 
         displayMenuPanel, 
         displayHoursPanel,

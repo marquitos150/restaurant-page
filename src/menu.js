@@ -39,7 +39,7 @@ import drPepper from "./assets/dr-pepper.png";
 import sprite from "./assets/sprite.png";
 // SAUCES
 import lambSauce from "./assets/lamb-sauce.png";
-import gordonSauce from "./assets/gordon-sauce.png";
+import grillySauce from "./assets/grilly-sauce.png";
 import honeyMustard from "./assets/honey-mustard.png";
 import chimichurri from "./assets/chimichurri.png";
 import bbqSauce from "./assets/bbq-sauce.png";
@@ -255,7 +255,7 @@ export function Menu() {
                         name: "GRN Donut",
                         image: grnDonut,
                         price: "$3.50",
-                        description: "Just a chocolate donut. I like chocolate!"
+                        description: "Just a chocolate donut. Y'know, cause I like chocolate!"
                     },
                     {
                         name: "Caramel Ice Cream",
@@ -322,8 +322,8 @@ export function Menu() {
                         description: "Where's the lamb sauce? WHERE'S THE LAMB SAAAAUCE!!?"
                     },
                     {
-                        name: "Gordon's Sauce",
-                        image: gordonSauce,
+                        name: "Grilly's Sauce",
+                        image: grillySauce,
                         price: "$1.35",
                         description: "My signature sauce. It's a secret."
                     },
@@ -336,31 +336,31 @@ export function Menu() {
                     {
                         name: "Chimichurri",
                         image: chimichurri,
-                        price: "$0.30",
+                        price: "FREE",
                         description: "Vibrant sauce made from chopped parsley, garlic, olive oil, and pepper flakes. Great for nuggets."
                     },
                     {
                         name: "BBQ sauce",
                         image: bbqSauce,
-                        price: "$0.30",
+                        price: "FREE",
                         description: "Sweet, tangy, and spicy sauce. I don't like BBQ sauce, it upsets my stomach."
                     },
                     {
                         name: "Ranch",
                         image: ranch,
-                        price: "$0.30",
+                        price: "FREE",
                         description: "Savory, creamy dressing. But, I also don't like ranch."
                     },
                     {
                         name: "Ketchup",
                         image: ketchup,
                         price: "FREE",
-                        description: "Why did Gordon throw ketchup at one of the contestants? Because he couldn't \'catch-up\' to his standards."
+                        description: "Why did Grilly throw ketchup at one of the kitchen staff? Because he couldn't \'catch-up\' to his standards."
                     },
                     {
                         name: "Teriyaki Sauce",
                         image: teriyakiSauce,
-                        price: "$0.30",
+                        price: "FREE",
                         description: "Glossy and sweet glaze made from soy sauce. 私のジョークは気に入りましたか?"
                     }
                 ]

@@ -80,7 +80,7 @@ form > button:hover {
     background-color: var(--secondary-color);
 }
 
-.cursed-gordon-ramsay {
+.grilly-wink {
     object-fit: cover;
     object-position: right center;
     width: max(300px, 60%);
@@ -88,7 +88,7 @@ form > button:hover {
 }
 
 @media (max-width: 768px) {
-    .cursed-gordon-ramsay {
+    .grilly-wink {
         width: calc(60% - 100px);
         object-position: 85%;
     }

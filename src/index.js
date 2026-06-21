@@ -29,7 +29,7 @@ function scrollToTop() {
 function displayHomePage() {
     content.innerHTML = "";
     content.appendChild(Home().displayHeading());
-    content.appendChild(Home().displayGordonImages());
+    content.appendChild(Home().displayGrillyLogo());
     content.appendChild(Home().displayIntroPanel());
     content.appendChild(Home().displayMenuPanel());
     content.appendChild(Home().displayHoursPanel());

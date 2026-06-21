@@ -92,6 +92,7 @@ header > button {
   background-image: url('assets/logo.svg');
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   width: clamp(80px, 20vw, 100px);
   max-width: 100%;
   aspect-ratio: 1 / 1;
@@ -155,31 +156,12 @@ nav > button:hover {
   z-index: 1;
 }
 
-.gordon-images {
+.grilly-images {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   width: 100%;
-}
-
-
-.gordon-left,
-.gordon-right {
-  object-fit: cover;
-  object-position: center;
-  width: clamp(0px, calc(25% - 100px), 300px);
-  max-width: 100%;
-  aspect-ratio: 1 / 1;
-  position: absolute;
-}
-
-.gordon-left {
-  right: 75%;
-}
-
-.gordon-right {
-  left: 75%;
 }
 
 .giant-logo {
@@ -419,12 +401,12 @@ td, th {
   text-decoration: underline;
 }
 
-.gordon-fullbody {
+.grilly-fullbody {
   display: block;
   object-fit: contain;
   object-position: center;
   width: clamp(150px, 30%, 200px);
-  aspect-ratio: 1 / 3;
+  aspect-ratio: 1 / 2;
   margin-left: auto;
 }
 
@@ -503,10 +485,5 @@ footer {
 @media (max-width: 400px) {
   .heading-wrapper {
     transform: scale(0.85);
-  }
-
-  .gordon-left,
-  .gordon-right {
-    display: none;
   }
 }

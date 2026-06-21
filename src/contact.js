@@ -1,5 +1,5 @@
 // Import image
-import cursedGordonRamsay from "./assets/cursed-gordon-ramsay.png";
+import grillyWink from "./assets/grilly-wink.png";
 
 export function Contact() {
     // helper functions
@@ -45,9 +45,9 @@ export function Contact() {
 
         const description = `
             I will respond when I can. If I'm unavailble, a manager or member of our customer service team will assist you. 
-            Please refrain from submitting spam, promotional content, or messages unrelated to restaurant inquiries.
+            Please keep messages respectful and relevant to restaurant inquiries.
         `;
-        const warning = "NEVER send threats. Doing so will result in legal action and me publicly humiliating you.";
+        const warning = "Spam, promotional content, threats, harassment, or inappropriate messages are not permitted.";
 
         contactFormDescWarn.textContent = warning;
         contactFormDescItac.append(description);
@@ -153,8 +153,8 @@ export function Contact() {
         contactForm.appendChild(contactFormDesc);
         contactForm.appendChild(form);
 
-        // create image of gordon ramsay sticking his tongue out like a weirdo
-        const cursedImg = createImage(cursedGordonRamsay, "Gordon Ramsay sticking his tongue out", "cursed-gordon-ramsay");
+        // create image of grilly rawford holding a thumbs-up
+        const cursedImg = createImage(grillyWink, "Grilly Rawford holding a thumbs-up", "grilly-wink");
 
         contactWrapper.appendChild(contactForm);
         contactWrapper.appendChild(cursedImg);

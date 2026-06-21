@@ -1,6 +1,6 @@
 # GRN Restaurant Page
 
-Welcome to Gordon Ramsay's fast-food restaurant, Gordon Ramsay's Nuggets (GRN). This webpage features three tabs, `home`, `menu`, and `contact`, that you can interact with. Take a look at it through this [**live demo**](https://marquitos150.github.io/restaurant-page/)!
+Welcome to Grilly Rawford's fast-food restaurant, Grilly Rawford's Nuggets (GRN). This webpage features three tabs, `home`, `menu`, and `contact`, that you can interact with. Take a look at it through this [**live demo**](https://marquitos150.github.io/restaurant-page/)!
 
 ## Project Creation & Structure
 The project was built using Vanilla Javascript (ES6), with its modules for each restaurant page tab being bundled with Webpack. The default package manager for Node.js, `npm`, was used to install Webpack and its associated loaders and plugins while managing project dependencies. From there, commands like `npx webpack` and `npx webpack serve` could be run to build the project, save the bundled files to the distribution (`dist`) directory, and test changes in a development server. 
@@ -55,4 +55,4 @@ npm run build
 ```
 
 ## Images
-All images, backgrounds, logos, and profiles, except photos of Gordon Ramsay, were AI-generated using Gemini 3. Prompts were written to match unique and traditional fast-food items within the restaurant setting and other visual elements that complemented the overall theme and design of the project.
+All images, backgrounds, logos, and profiles were AI-generated using Gemini 3. Prompts were written to match unique and traditional fast-food items within the restaurant setting and other visual elements that complemented the overall theme and design of the project.
